@@ -16,6 +16,7 @@ describe 'Feature Test: User Signup', :type => :feature do
   end
 
   it "on sign up, successfully adds a session hash" do
+    binding.pry
     visit '/users/new'
     # user_signup method is defined in login_helper.rb
     user_signup
