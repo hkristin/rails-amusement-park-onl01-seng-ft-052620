@@ -2,7 +2,7 @@ require_relative "../rails_helper.rb"
 describe 'Feature Test: User Signup', :type => :feature do
 
   it 'successfully signs up as non-admin' do
-
+    binding.pry
     visit '/users/new'
     expect(current_path).to eq('/users/new')
     # user_signup method is defined in login_helper.rb
@@ -16,7 +16,6 @@ describe 'Feature Test: User Signup', :type => :feature do
   end
 
   it "on sign up, successfully adds a session hash" do
-    binding.pry
     visit '/users/new'
     # user_signup method is defined in login_helper.rb
     user_signup
